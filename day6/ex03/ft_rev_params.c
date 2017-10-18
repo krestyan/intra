@@ -6,13 +6,13 @@
 /*   By: akrestya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 20:39:31 by akrestya          #+#    #+#             */
-/*   Updated: 2017/10/18 21:06:54 by akrestya         ###   ########.fr       */
+/*   Updated: 2017/10/18 23:24:35 by akrestya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar(char c);
+void	ft_putchar(char c);
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	int	j;
 

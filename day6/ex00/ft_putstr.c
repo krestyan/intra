@@ -6,7 +6,7 @@
 /*   By: akrestya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 20:22:19 by akrestya          #+#    #+#             */
-/*   Updated: 2017/10/18 20:24:46 by akrestya         ###   ########.fr       */
+/*   Updated: 2017/10/18 22:53:15 by akrestya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@ void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
-    while (*str)
-    {
-        ft_putchar(*str);
-        str++;
-    }
+	while (*str)
+	{
+		ft_putchar(*str);
+		str++;
+	}
 }
