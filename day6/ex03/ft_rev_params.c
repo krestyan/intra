@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akrestya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/17 15:20:12 by akrestya          #+#    #+#             */
-/*   Updated: 2017/10/18 21:18:14 by akrestya         ###   ########.fr       */
+/*   Created: 2017/10/18 20:39:31 by akrestya          #+#    #+#             */
+/*   Updated: 2017/10/18 21:06:54 by akrestya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
-{
-	int i;
+void ft_putchar(char c);
 
-	i = 0;
-	while (s1[i] || s2[i])
+int	main(int argc, char **argv)
+{
+	int	j;
+
+	j = 0;
+	while (--argc)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		else
-			i++;
+		j = 0;
+		while (argv[argc][j])
+		{
+			ft_putchar(argv[argc][j]);
+			j++;
+		}
+		ft_putchar('\n');
 	}
 	return (0);
 }

@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akrestya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/17 15:20:12 by akrestya          #+#    #+#             */
-/*   Updated: 2017/10/18 21:18:14 by akrestya         ###   ########.fr       */
+/*   Created: 2017/10/18 21:07:48 by akrestya          #+#    #+#             */
+/*   Updated: 2017/10/18 21:39:27 by akrestya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+#include <stdio.h>
+
+int	cmp(char *s1, char *s2)
 {
 	int i;
 
@@ -22,5 +24,40 @@ int		ft_strcmp(char *s1, char *s2)
 		else
 			i++;
 	}
-	return (0);
+	return (1);
 }
+
+void swapstr(char *s1, char *s2)
+{
+	char *temp;
+
+	temp = &s1;
+	s1 = &s2;
+	s2 = &temp;
+}
+
+
+int main(int argc, char **argv)
+{
+	int		cursor;
+	int		swap;
+
+	if(!argc)
+		return (0);
+	swap = 1;
+	while (swap)
+	{
+		swap = 0;
+		cursor = 2;
+		while (cursor < argc)
+		{
+			if (cmp(argv[cursor], argv[cursor - 1]) > 0)
+			{
+				swapstr(argv[cursor], argv[cursor - 1]);
+				swap++;
+			}
+			cursor++;
+		}
+	}
+}
+

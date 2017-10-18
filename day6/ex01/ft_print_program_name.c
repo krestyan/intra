@@ -1,12 +1,18 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akrestya <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/18 19:55:38 by akrestya          #+#    #+#             */
+/*   Updated: 2017/10/18 20:33:01 by akrestya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_putchar(char c)
-{
-    write(1, &c, 1);
-    return (0);
-}
+void	ft_putchar(char c);
 
-int main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
     if (!argc)
         return (1);
