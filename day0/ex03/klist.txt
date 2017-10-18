@@ -1,0 +1,6 @@
+Credentials cache: API:27722
+        Principal: akrestya@42.FR
+
+  Issued                Expires               Principal
+Oct  9 15:04:31 2017  Oct 10 01:04:37 2017  krbtgt/42.FR@42.FR
+Oct  9 20:34:56 2017  Oct 10 01:04:37 2017  ldap/ldap-proxy.42.fr@42.FR
