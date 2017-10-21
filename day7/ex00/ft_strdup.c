@@ -6,17 +6,17 @@
 /*   By: akrestya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/18 23:55:24 by akrestya          #+#    #+#             */
-/*   Updated: 2017/10/19 00:32:35 by akrestya         ###   ########.fr       */
+/*   Updated: 2017/10/19 22:54:51 by akrestya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char		*ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
-	char *cpy;
-	int len;
-	int i;
+	char	*cpy;
+	int		len;
+	int		i;
 
 	if (!*src)
 		return (0);
