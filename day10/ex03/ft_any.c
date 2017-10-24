@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_any.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akrestya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/23 17:00:59 by akrestya          #+#    #+#             */
-/*   Updated: 2017/10/23 17:11:20 by akrestya         ###   ########.fr       */
+/*   Created: 2017/10/23 18:55:16 by akrestya          #+#    #+#             */
+/*   Updated: 2017/10/23 19:42:58 by akrestya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_foreach(int *tab, int length, void(*f)(int));
-void ft_putnbr(int nb);
-
-int main()
+int	ft_any(char **tab, int (*f)(char*))
 {
-	int tab[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8 ,9 };
-	 ft_foreach(tab, 10, &ft_putnbr);
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		if (f(tab[i]) == 1)
+			return (1);
+		i++;
+	}
+	return (0);
 }

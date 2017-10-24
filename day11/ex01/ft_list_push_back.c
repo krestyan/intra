@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   ft_list_push_back.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akrestya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/23 16:59:39 by akrestya          #+#    #+#             */
-/*   Updated: 2017/10/23 18:08:15 by akrestya         ###   ########.fr       */
+/*   Created: 2017/10/24 15:37:57 by akrestya          #+#    #+#             */
+/*   Updated: 2017/10/24 16:55:05 by akrestya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void (*f)(int))
-{
-	int	i;
+#include <stdlib.h>
+#include "ft_list.h"
 
-	i = 0;
-	while (i < length)
-		f(tab[i++]);
+t_list *ft_create_elem(void *data);
+
+void ft_list_push_back(t_list **begin_list, void *data)
+{
+	t_list *crawl;
+	
+	crawl = *begin_list;
+	if (*begin_list)
+	{
+		while (crawl->next != NULL)
+			crawl = crawl->next;
+		crawl->next = ft_create_elem(&data);
+	}
+	else
+	{
+		*begin_list = ft_create_elem(&data);
+	}
 }

@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   ft_list.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akrestya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/23 16:59:39 by akrestya          #+#    #+#             */
-/*   Updated: 2017/10/23 18:08:15 by akrestya         ###   ########.fr       */
+/*   Created: 2017/10/24 15:36:41 by akrestya          #+#    #+#             */
+/*   Updated: 2017/10/24 15:36:49 by akrestya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void (*f)(int))
-{
-	int	i;
+#ifndef FT_LIST_H
+# define FT_LIST_H
 
-	i = 0;
-	while (i < length)
-		f(tab[i++]);
-}
+typedef struct  s_list
+{
+    struct s_list   *next;
+    void            *data;
+}               t_list;
+#endif
