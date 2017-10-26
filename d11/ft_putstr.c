@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akrestya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/12 21:33:30 by akrestya          #+#    #+#             */
-/*   Updated: 2017/10/13 21:47:42 by akrestya         ###   ########.fr       */
+/*   Created: 2017/10/16 16:30:57 by akrestya          #+#    #+#             */
+/*   Updated: 2017/10/16 16:39:11 by akrestya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_strrev(char *str)
-{
-	int		counter;
-	int		half;
-	char	temp;
-	int		i;
+#include <unistd.h>
+#include <string.h>
+#include <stdio.h>
 
-	counter = 0;
-	i = 0;
-	while (str[counter + 1])
-	{
-		counter++;
-	}
-	half = counter / 2;
-	while (counter != half)
-	{
-		temp = str[i];
-		str[i] = str[counter];
-		str[counter] = temp;
-		counter--;
-		i++;
-	}
+void	ft_check_data(void *data)
+{
+	char	**str;
+	int i =0;
+
+	str = data;
+	int length = strlen(*str);
+	if (length > 2)
+		printf("Long\n");
+	else
+		printf("Short\n");
 }
