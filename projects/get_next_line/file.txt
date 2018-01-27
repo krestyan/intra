@@ -1,0 +1,4 @@
+This is a text.
+For test.
+Crema.!
+Am facut get_next_line
